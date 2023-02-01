@@ -3,6 +3,23 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+body {
+  overflow: overlay;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  padding-right: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgb(231, 231, 231); 
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(187, 187, 187); 
+}
+
 .header{
   min-height: 100vh;
   width: 100%;
@@ -65,4 +82,137 @@ img{
   padding-top: 30px;
   overflow-wrap: normal;
   justify-content: center;
+}
+
+/* Resume */
+.container1{
+  padding: 20px;
+  margin-left: 8%;
+  min-height: 1200px;
+}
+.education{
+  margin-left: 13%;
+  width: 40%;
+  justify-content: left;
+  float: left;
+}
+#titles{
+  color: white;
+  text-decoration: underline;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+.technicals{
+  float: left;
+  justify-content:  left;
+  margin-left: 5%;
+}
+.technicals ul{
+  border-left: 2px solid white;
+}
+.technicals ul li{
+  font-size: 15px;
+  color: rgb(211, 211, 211);
+  margin-left: 30px;
+}
+dl{
+  color: white;
+  font-size: 20px;
+  text-indent: 10px;
+}
+dt{
+  margin-top: 25px;
+  border-left: 2px solid white;
+}
+dd{
+  font-size: 15px;
+  color: rgb(211, 211, 211);
+  border-left: 2px solid white;
+}
+#dates{
+  font-size: 12px;
+  color: rgb(211, 211, 211);
+  font-style: italic;
+  padding-top: 3px;
+}
+.experience{
+  width: 60%;
+  margin-top: 25%;
+  margin-left: 13%;
+  justify-content: left;
+}
+.experience ol{
+  text-indent: 10px;
+  color: white;
+}
+.experience ol div{
+  border-left: 2px solid white;
+}
+.experience ol li{
+  font-size: 20px;
+  margin-left: 30px;
+  margin-top: 25px;
+}
+.experience ol dd{
+  border-left: none;
+  margin-left: 30px;
+  font-style: italic;
+}
+.experience ol p{
+  color: rgb(211, 211, 211);
+  margin-left: 40px;
+  text-indent: 0;
+  font-size: 15px;
+}
+
+.container2{
+  padding: 20px;
+  margin-left: 1%;
+}
+.awards{
+  width: 30%;
+  margin-top: 4%;
+  margin-left: 11%;
+  justify-content: left;
+  float: left;
+} 
+
+.awards ol{
+  border-left: 2px solid white;
+  text-indent: 10px;
+  color: white;
+}
+.awards ol li{
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.references{
+  width: 30%;
+  margin-top: 4%;
+  margin-left: 17%;
+  justify-content: left;
+  float: left;
+}
+.references ul{
+  border-left: 2px solid white;
+  text-indent: 10px;
+  color: white;
+}
+.references ul li{
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.container1 button{
+  background-color: rgb(34, 34, 34);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px 40px;
+  font-size: 20px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 380%);
 }
