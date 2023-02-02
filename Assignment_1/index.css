@@ -96,7 +96,7 @@ img{
   justify-content: left;
   float: left;
 }
-#titles{
+.titles{
   color: white;
   text-decoration: underline;
   padding-bottom: 10px;
@@ -106,9 +106,6 @@ img{
   float: left;
   justify-content:  left;
   margin-left: 5%;
-}
-.technicals ul{
-  border-left: 2px solid white;
 }
 .technicals ul li{
   font-size: 15px;
@@ -129,7 +126,7 @@ dd{
   color: rgb(211, 211, 211);
   border-left: 2px solid white;
 }
-#dates{
+.dates{
   font-size: 12px;
   color: rgb(211, 211, 211);
   font-style: italic;
@@ -144,8 +141,6 @@ dd{
 .experience ol{
   text-indent: 10px;
   color: white;
-}
-.experience ol div{
   border-left: 2px solid white;
 }
 .experience ol li{
@@ -155,12 +150,18 @@ dd{
 }
 .experience ol dd{
   border-left: none;
-  margin-left: 30px;
   font-style: italic;
+}
+.experience ol h2{
+  border-left: none;
+  font-size: 15px;
+  font-weight: normal;
+  color: rgb(211, 211, 211);
+  font-style: italic;
+  margin-left: -10px;
 }
 .experience ol p{
   color: rgb(211, 211, 211);
-  margin-left: 40px;
   text-indent: 0;
   font-size: 15px;
 }
@@ -205,7 +206,7 @@ dd{
 }
 
 .container1 button{
-  background-color: rgb(34, 34, 34);
+  background-color: rgba(34, 34, 34, 0.637);
   border: none;
   color: white;
   cursor: pointer;
@@ -215,4 +216,42 @@ dd{
   position: absolute;
   left: 50%;
   transform: translate(-50%, 380%);
+}
+
+/* Projects */
+.projects{
+  margin-left: 17%;
+  margin-top: -5%;
+  width: 60%;
+  justify-content: left;
+  padding: 100px;
+}
+#text{
+  width: 50%;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.projects div{
+  margin-top: 70px;
+}
+.projects div img{
+  vertical-align: middle;
+  transform: translate(30%, 19%);
+}
+.projects ol{
+  color: white;
+  font-size: 20px;
+}
+.projects ol :first-child{
+  margin-top: 20px;
+}
+.projects ol li{
+  border-right: 2px solid white;
+}
+.projects ol p{
+  color:  rgb(211, 211, 211);
+  font-size: 15px;
+  border-right: 2px solid white;
+  padding-right: 40px;
 }
