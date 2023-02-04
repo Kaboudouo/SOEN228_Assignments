@@ -1,10 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-body {
-  overflow: overlay;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -21,18 +18,20 @@ body {
 }
 
 .header{
+  min-height: 10%;
+  position: relative;
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  align-items:stretch;
+}
+body{
+  overflow: overlay;
   min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 22, 0.493),rgba(0, 0, 22, 0.808)), url(Resources/Images/Fluff/image\ B.jpg);
   background-position: center;
   background-size: cover;
-  position: relative;
-}
-nav{
-  display: flex;
-  padding: 2% 4%;
-  justify-content: space-between;
-  align-items:stretch;
 }
 .nav-links{
   flex: 1;
@@ -56,7 +55,7 @@ nav{
   text-decoration: none;
   font-size: 40px;
 }
-img{
+.mogus{
   position:relative;
   border: 5px solid white;
   transform: translate(80%, 50%);
@@ -221,37 +220,34 @@ dd{
 /* Projects */
 .projects{
   margin-left: 17%;
-  margin-top: -5%;
+  margin-top: -3%;
   width: 60%;
   justify-content: left;
   padding: 100px;
 }
-#text{
-  width: 50%;
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-.projects div{
-  margin-top: 70px;
-}
-.projects div img{
-  vertical-align: middle;
-  transform: translate(30%, 19%);
-}
 .projects ol{
   color: white;
-  font-size: 20px;
-}
-.projects ol :first-child{
-  margin-top: 20px;
+  font-size: 25px;
 }
 .projects ol li{
-  border-right: 2px solid white;
+  margin-top: 20px;
+  margin-bottom: 70px;
 }
 .projects ol p{
   color:  rgb(211, 211, 211);
-  font-size: 15px;
+  font-size: 20px;
+  width: 50%;
   border-right: 2px solid white;
-  padding-right: 40px;
+  padding-right: 9%;
+  padding-top: 2%;
+}
+.box {
+  display: flex;
+  align-items:center;
+}
+.box img{
+  width: 250px;
+  margin-left: 10%;
+  border: 4px solid white;
+  border-radius: 8px;
 }
