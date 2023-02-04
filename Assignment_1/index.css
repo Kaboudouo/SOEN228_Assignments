@@ -253,7 +253,6 @@ dd{
 }
 
 /*Contact*/
-
 .contact-me{
   margin-left: 19%;
   margin-top: -3%;
@@ -278,10 +277,11 @@ dd{
   background-color: transparent;
   border: 2px solid white;
   margin-top: 5px;
+  border-radius: 3px;
 }
 .input-fields input:focus{
   padding: 5px;
-  background-color: rgb(86, 85, 97);
+  background-color: rgba(49, 49, 54, 0.562);
   border: 2px solid white;
 }
 .input-fields textarea{
@@ -292,11 +292,19 @@ dd{
   border: 2px solid white;
   resize: none;
   margin-top: 5px;
+  border-radius: 3px;
 }
 .input-fields textarea:focus{
   padding: 5px;
-  background-color: rgb(77, 77, 90);
+  background-color: rgba(49, 49, 54, 0.562);
   border: 2px solid white;
   resize: none;
 }
 
+/*Social*/
+.social{
+  margin-left: 32%;
+  width: 21%;
+  justify-content: left;
+  padding: 100px;
+}
