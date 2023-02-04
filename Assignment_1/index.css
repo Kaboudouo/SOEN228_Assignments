@@ -219,7 +219,7 @@ dd{
 
 /* Projects */
 .projects{
-  margin-left: 17%;
+  margin-left: 19%;
   margin-top: -3%;
   width: 60%;
   justify-content: left;
@@ -238,7 +238,7 @@ dd{
   font-size: 20px;
   width: 50%;
   border-right: 2px solid white;
-  padding-right: 9%;
+  padding-right: 7%;
   padding-top: 2%;
 }
 .box {
@@ -247,7 +247,56 @@ dd{
 }
 .box img{
   width: 250px;
-  margin-left: 10%;
+  margin-left: 8%;
   border: 4px solid white;
   border-radius: 8px;
 }
+
+/*Contact*/
+
+.contact-me{
+  margin-left: 19%;
+  margin-top: -3%;
+  width: 60%;
+  justify-content: left;
+  padding: 100px;
+}
+.input-fields{
+  font-size: 25px;
+  color: white;
+  width: 100%;
+  display: inline-block;
+}
+.input-fields div{
+  margin-top: 3%;
+}
+.input-fields input{
+  color:white;
+  font-size: 20px;
+  height: 30px;
+  padding: 5px;
+  background-color: transparent;
+  border: 2px solid white;
+  margin-top: 5px;
+}
+.input-fields input:focus{
+  padding: 5px;
+  background-color: rgb(86, 85, 97);
+  border: 2px solid white;
+}
+.input-fields textarea{
+  color:white;
+  font-size: 20px;
+  padding: 5px;
+  background-color: transparent;
+  border: 2px solid white;
+  resize: none;
+  margin-top: 5px;
+}
+.input-fields textarea:focus{
+  padding: 5px;
+  background-color: rgb(77, 77, 90);
+  border: 2px solid white;
+  resize: none;
+}
+
