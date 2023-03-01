@@ -3,6 +3,101 @@
   <head>
     <title>Admin Profile</title>
     <link rel="stylesheet" href="index.css" />
+
+    <script type="text/javascript">
+      function submitResume() {
+        // var fileReader = new FileReader();
+
+        var educData = document.getElementById('educ-text').value;
+        var skillData = document.getElementById('skill-text').value;
+        var awardsData = document.getElementById('awards-text').value;
+        var workData = document.getElementById('work-text').value;
+        var refereeData = document.getElementById('referee-text').value;
+
+        var txtFile = new File(
+          [
+            educData +
+              '\n' +
+              skillData +
+              '\n' +
+              awardsData +
+              '\n' +
+              workData +
+              '\n' +
+              refereeData,
+          ],
+          '/local_comp',
+          {
+            type: 'text/plain',
+          }
+        );
+        var blob2URL = window.URL.createObjectURL(txtFile);
+
+        var anchorTag = document.createElement('a');
+        anchorTag.href = blob2URL;
+        anchorTag.download = 'ResumeInfo';
+        anchorTag.click();
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <div class="header">
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="adminIndex.html">Home</a>
+          </li>
+          <li>
+            <a href="adminResume.html"><u>Resume</u></a>
+          </li>
+          <li><a href="adminProjects.html">Projects</a></li>
+          <li><a href="adminContact.html">Contacts</a></li>
+          <li><a href="adminSocial.html">Social</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="resume">
+      <h1 class="titles">Change Resume</h1>
+      <div class="input-fields">
+        <div>
+          <div>
+            <label for="educ-text">Educational Qualifications:</label>
+          </div>
+          <textarea id="educ-text" rows="3" cols="100"></textarea>
+        </div>
+        <div>
+          <div>
+            <label for="skill-text">Skill Set:</label>
+          </div>
+          <textarea id="skill-text" rows="3" cols="100"></textarea>
+        </div>
+        <div>
+          <div>
+            <label for="awards-text">Awards/Recognition:</label>
+          </div>
+          <textarea id="awards-text" rows="3" cols="100"></textarea>
+        </div>
+        <div>
+          <div>
+            <label for="work-text">Work Experience:</label>
+          </div>
+          <textarea id="work-text" rows="3" cols="100"></textarea>
+        </div>
+        <div>
+          <div>
+            <label for="referee-text">Referees:</label>
+          </div>
+          <textarea id="referee-text" rows="3" cols="100"></textarea>
+        </div>
+        <div class="logbutton">
+          <input
+            id="submit"
+            type="button"
+            value="Submit"
+            onClick="submitResume()"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -3,6 +3,57 @@
   <head>
     <title>Admin Profile</title>
     <link rel="stylesheet" href="index.css" />
+
+    <script type="text/javascript">
+      function submitProjects() {
+        var projectData = document.getElementById('project-text').value;
+
+        var txtFile = new File([projectData], '/local_comp', {
+          type: 'text/plain',
+        });
+        var blob2URL = window.URL.createObjectURL(txtFile);
+
+        var anchorTag = document.createElement('a');
+        anchorTag.href = blob2URL;
+        anchorTag.download = 'ProjectsInfo';
+        anchorTag.click();
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <div class="header">
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="adminIndex.html">Home</a>
+          </li>
+          <li><a href="adminResume.html">Resume</a></li>
+          <li>
+            <a href="adminProjects.html"><u>Projects</u></a>
+          </li>
+          <li><a href="adminContact.html">Contacts</a></li>
+          <li><a href="adminSocial.html">Social</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="projects">
+      <h1 class="titles">Change Projects</h1>
+      <div class="input-fields">
+        <div>
+          <div>
+            <label for="project-text">My Projects:</label>
+          </div>
+          <textarea id="project-text" rows="10" cols="100"></textarea>
+        </div>
+        <div class="logbutton">
+          <input
+            id="submit"
+            type="button"
+            value="Submit"
+            onClick="submitProjects()"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

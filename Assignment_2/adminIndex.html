@@ -3,6 +3,68 @@
   <head>
     <title>Admin Profile</title>
     <link rel="stylesheet" href="index.css" />
+
+    <script type="text/javascript">
+      function submitIndex() {
+        // var fileReader = new FileReader();
+
+        var statementData = document.getElementById('statement-text').value;
+        var bioData = document.getElementById('bio-text').value;
+
+        var txtFile = new File(
+          [statementData + '\n' + bioData],
+          '/local_comp',
+          {
+            type: 'text/plain',
+          }
+        );
+        var blob2URL = window.URL.createObjectURL(txtFile);
+
+        var anchorTag = document.createElement('a');
+        anchorTag.href = blob2URL;
+        anchorTag.download = 'HomeInfo';
+        anchorTag.click();
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <div class="header">
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="adminIndex.html"><u>Home</u></a>
+          </li>
+          <li><a href="adminResume.html">Resume</a></li>
+          <li><a href="adminProjects.html">Projects</a></li>
+          <li><a href="adminContact.html">Contacts</a></li>
+          <li><a href="adminSocial.html">Social</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="home">
+      <h1 class="titles">Change Home Page</h1>
+      <div class="input-fields">
+        <div>
+          <div>
+            <label for="statement-text">Professional Statement:</label>
+          </div>
+          <textarea id="statement-text" rows="5" cols="100"></textarea>
+        </div>
+        <div>
+          <div>
+            <label for="bio-text">Brief Biography:</label>
+          </div>
+          <textarea id="bio-text" rows="5" cols="100"></textarea>
+        </div>
+        <div class="logbutton">
+          <input
+            id="submit"
+            type="button"
+            value="Submit"
+            onClick="submitIndex()"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
