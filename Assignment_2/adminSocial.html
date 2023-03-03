@@ -3,6 +3,24 @@
   <head>
     <title>Admin Profile</title>
     <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript">
+      function submitSocial() {
+        var s1Data = document.getElementById('s1-text').value;
+        var s2Data = document.getElementById('s2-text').value;
+        var s3Data = document.getElementById('s3-text').value;
+
+        var txtFile = new File([s1Data + '\n' + s2Data + '\n' + s3Data], '', {
+          type: 'text/plain',
+        });
+
+        var blob2URL = window.URL.createObjectURL(txtFile);
+
+        var anchorTag = document.createElement('a');
+        anchorTag.href = blob2URL;
+        anchorTag.download = 'SocialsInfo';
+        anchorTag.click();
+      }
+    </script>
   </head>
   <body>
     <div class="header">
@@ -17,7 +35,39 @@
           <li>
             <a href="adminSocial.html"><u>Social</u></a>
           </li>
+          <li><a href="adminLogout.html">Logout</a></li>
         </ul>
+      </div>
+    </div>
+    <div class="social">
+      <h1 class="titles">Change Socials</h1>
+      <div class="input-fields">
+        <div>
+          <div>
+            <label for="s1-text">Social Link 1:</label>
+          </div>
+          <textarea id="s1-text" rows="2" cols="100"></textarea>
+        </div>
+        <div>
+          <div>
+            <label for="s2-text">Social Link 2:</label>
+          </div>
+          <textarea id="s2-text" rows="2" cols="100"></textarea>
+        </div>
+        <div>
+          <div>
+            <label for="s3-text">Social Link 3:</label>
+          </div>
+          <textarea id="s3-text" rows="2" cols="100"></textarea>
+        </div>
+        <div class="logbutton">
+          <input
+            id="submit"
+            type="button"
+            value="Submit"
+            onclick="submitSocial()"
+          />
+        </div>
       </div>
     </div>
   </body>

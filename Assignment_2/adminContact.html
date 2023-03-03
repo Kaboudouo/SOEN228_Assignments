@@ -3,6 +3,19 @@
   <head>
     <title>Admin Profile</title>
     <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript">
+      function readMessages() {
+        var msgText = document.getElementById('upload').files[0];
+
+        const fr = new FileReader();
+        fr.onload = (e) => {
+          var msgElem = document.getElementById('msg-txt');
+          msgElem.value = fr.result;
+        };
+
+        fr.readAsText(msgText, 'UTF-8');
+      }
+    </script>
   </head>
   <body>
     <div class="header">
@@ -17,7 +30,30 @@
             <a href="adminContact.html"><u>Contacts</u></a>
           </li>
           <li><a href="adminSocial.html">Social</a></li>
+          <li><a href="adminLogout.html">Logout</a></li>
         </ul>
+      </div>
+    </div>
+    <div class="contact">
+      <h1 class="titles">Message Center</h1>
+      <div class="input-fields">
+        <div class="logbutton">
+          <label class="custom-label" for="upload">Read Message</label>
+          <input
+            id="upload"
+            type="file"
+            value="Read Message"
+            onchange="readMessages()"
+          />
+        </div>
+        <div>
+          <textarea
+            readonly="readonly"
+            id="msg-txt"
+            rows="10"
+            cols="100"
+          ></textarea>
+        </div>
       </div>
     </div>
   </body>

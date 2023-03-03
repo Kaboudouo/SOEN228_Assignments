@@ -59,168 +59,18 @@ body {
   text-decoration: none;
   font-size: 40px;
 }
-.mogus {
-  position: relative;
-  border: 5px solid white;
-  transform: translate(80%, 50%);
-  border-radius: 8px;
-  width: 300px;
-}
-.description {
-  width: 50%;
-  color: #fff;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-35%, -50%);
-  text-align: center;
-  justify-content: center;
-  font-size: 25px;
-}
-.des_head {
-  font-size: 30px;
-  text-decoration: underline;
-}
-.des_body {
-  padding-top: 30px;
-  overflow-wrap: normal;
-  justify-content: center;
-}
-
-/* Resume */
-.container1 {
-  padding: 20px;
-  margin-left: 8%;
-  min-height: 1200px;
-}
-.education {
-  margin-left: 13%;
-  width: 40%;
-  justify-content: left;
-  float: left;
-}
 .titles {
   color: white;
   text-decoration: underline;
-  padding-bottom: 10px;
-  padding-top: 20px;
 }
-.technicals {
-  float: left;
+
+.social {
+  margin-left: 19%;
+  margin-top: -3%;
+  width: 50%;
   justify-content: left;
-  margin-left: 5%;
+  padding: 100px;
 }
-.technicals ul li {
-  font-size: 15px;
-  color: rgb(211, 211, 211);
-  margin-left: 30px;
-}
-dl {
-  color: white;
-  font-size: 20px;
-  text-indent: 10px;
-}
-dt {
-  margin-top: 25px;
-  border-left: 2px solid white;
-}
-dd {
-  font-size: 15px;
-  color: rgb(211, 211, 211);
-  border-left: 2px solid white;
-}
-.dates {
-  font-size: 12px;
-  color: rgb(211, 211, 211);
-  font-style: italic;
-  padding-top: 3px;
-}
-.experience {
-  width: 60%;
-  margin-top: 25%;
-  margin-left: 13%;
-  justify-content: left;
-}
-.experience ol {
-  text-indent: 10px;
-  color: white;
-  border-left: 2px solid white;
-}
-.experience ol li {
-  font-size: 20px;
-  margin-left: 30px;
-  margin-top: 25px;
-}
-.experience ol dd {
-  border-left: none;
-  font-style: italic;
-}
-.experience ol h2 {
-  border-left: none;
-  font-size: 15px;
-  font-weight: normal;
-  color: rgb(211, 211, 211);
-  font-style: italic;
-  margin-left: -10px;
-}
-.experience ol p {
-  color: rgb(211, 211, 211);
-  text-indent: 0;
-  font-size: 15px;
-}
-
-.container2 {
-  padding: 20px;
-  margin-left: 1%;
-}
-.awards {
-  width: 30%;
-  margin-top: 4%;
-  margin-left: 11%;
-  justify-content: left;
-  float: left;
-}
-
-.awards ol {
-  border-left: 2px solid white;
-  text-indent: 10px;
-  color: white;
-}
-.awards ol li {
-  font-size: 15px;
-  margin-left: 30px;
-}
-
-.references {
-  width: 30%;
-  margin-top: 4%;
-  margin-left: 17%;
-  justify-content: left;
-  float: left;
-}
-.references ul {
-  border-left: 2px solid white;
-  text-indent: 10px;
-  color: white;
-}
-.references ul li {
-  font-size: 15px;
-  margin-left: 30px;
-}
-
-.container1 button {
-  background-color: rgba(34, 34, 34, 0.637);
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 20px 40px;
-  font-size: 20px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 380%);
-}
-
 .resume {
   margin-left: 19%;
   margin-top: -3%;
@@ -228,8 +78,13 @@ dd {
   justify-content: left;
   padding: 100px;
 }
-
-/* Projects */
+.contact {
+  margin-left: 19%;
+  margin-top: -3%;
+  width: 50%;
+  justify-content: left;
+  padding: 100px;
+}
 .projects {
   margin-left: 19%;
   margin-top: -3%;
@@ -237,46 +92,33 @@ dd {
   justify-content: left;
   padding: 100px;
 }
-.projects ol {
-  color: white;
-  font-size: 25px;
-}
-.projects ol li {
-  margin-top: 20px;
-  margin-bottom: 70px;
-}
-.projects ol p {
-  color: rgb(211, 211, 211);
-  font-size: 20px;
-  width: 50%;
-  border-right: 2px solid white;
-  padding-right: 7%;
-  padding-top: 2%;
-}
-.box {
-  display: flex;
-  align-items: center;
-}
-.box img {
-  width: 250px;
-  margin-left: 8%;
-  border: 4px solid white;
-  border-radius: 8px;
-}
-
-/*Home*/
 .home {
   margin-left: 19%;
-  margin-top: -5%;
+  margin-top: -3%;
   width: 50%;
   justify-content: left;
   padding: 100px;
+}
+.admin {
+  margin-left: 35%;
+  margin-top: 5%;
+  width: 20%;
+  justify-content: left;
+  padding: 100px;
+}
+
+input[type='file'] {
+  display: none;
+}
+.custom-label {
+  border: 2px solid white;
+  padding: 10px;
+  cursor: pointer;
 }
 .input-fields {
   font-size: 25px;
   color: white;
   width: 100%;
-  display: inline-block;
 }
 .input-fields div {
   margin-top: 3%;
@@ -312,47 +154,6 @@ dd {
   border: 2px solid white;
   resize: none;
 }
-
-/*Social*/
-.social {
-  margin-left: 32%;
-  width: 21%;
-  justify-content: left;
-  padding: 100px;
-}
-
-/*Admin*/
-.admin {
-  margin-left: 35%;
-  width: 20%;
-  justify-content: left;
-  padding: 100px;
-}
-.fields {
-  font-size: 25px;
-  color: white;
-  width: 100%;
-  display: inline-block;
-}
-.fields div {
-  margin-top: 10%;
-}
-.fields input {
-  color: white;
-  font-size: 20px;
-  width: 95%;
-  height: 30px;
-  padding: 5px;
-  background-color: transparent;
-  border: 2px solid white;
-  margin-top: 5px;
-  border-radius: 3px;
-}
-.fields input:focus {
-  padding: 5px;
-  background-color: rgba(49, 49, 54, 0.562);
-  border: 2px solid white;
-}
 .logbutton {
   display: flex;
   justify-content: center;
@@ -361,4 +162,21 @@ dd {
   width: 200px;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.082);
+}
+.logbutton-special {
+  display: flex;
+  justify-content: center;
+}
+.logbutton-special input {
+  font-weight: bold;
+  font-size: larger;
+  width: 250px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.082);
+}
+#confirm {
+  color: white;
+  display: table;
+  margin: 0 auto;
+  margin-top: 20px;
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript">
+      function processLogout() {
+        sessionStorage.clear();
+        document.getElementById('confirm').textContent =
+          'Session Storage Cleared';
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="adminIndex.html">Home</a>
+          </li>
+          <li><a href="adminResume.html">Resume</a></li>
+          <li><a href="adminProjects.html">Projects</a></li>
+          <li><a href="adminContact.html">Contacts</a></li>
+          <li>
+            <a href="adminSocial.html">Social</a>
+          </li>
+          <li>
+            <a href="adminLogout.html"><u>Logout</u></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="admin">
+      <div class="input-fields">
+        <div class="logbutton-special">
+          <input
+            id="submit"
+            type="button"
+            value="Logout"
+            onclick="processLogout()"
+          />
+        </div>
+        <span id="confirm"></span>
+      </div>
+    </div>
+  </body>
+</html>
