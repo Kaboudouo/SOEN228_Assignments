@@ -1,3 +1,6 @@
+<?php 
+    $file = fopen('./Assignment3/TextContent/HomeInfo.txt', 'r');
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
@@ -21,7 +24,11 @@
         <div class="description">
             <h1 class = 'des_head'>Developping The Means For Self-Custodial Ownership</h1>
             <p class="des_body">
-                Coding is a powerful tool that allows for paragdim shifts in our way of thinking. I am of the firm belief that the future resides in decentralized ownership and intend to fully contribute to this new wave of technology.
+                <?php
+                    while ($line = fgets($file)) {
+                        echo $line;
+                    }
+                ?>
             </p>
         </div>
     </body>

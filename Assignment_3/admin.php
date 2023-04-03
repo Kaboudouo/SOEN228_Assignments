@@ -3,6 +3,7 @@
     <head>
         <title>Chayer Profile</title>
         <link rel="stylesheet" href="index.css" />
+
     </head>
     <body>
         <div class="header">
