@@ -1,5 +1,5 @@
 <?php 
-    $file = fopen('SocialsInfo.txt', 'r');
+    $file = fopen('./TextContent/SocialsInfo.txt', 'r');
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -11,12 +11,12 @@
         <div class="header">
             <div class="nav-links">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contacts</a></li>
-                    <li><a href="social.html"><u>Social</u></a></li>
-                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="resume.php">Resume</a></li>
+                    <li><a href="projects.php">Projects</a></li>
+                    <li><a href="contact.php">Contacts</a></li>
+                    <li><a href="social.php"><u>Social</u></a></li>
+                    <li><a href="admin.php">Admin</a></li>
                 </ul>
             </div>
         </div>

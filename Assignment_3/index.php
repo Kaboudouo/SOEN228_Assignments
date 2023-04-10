@@ -1,5 +1,5 @@
 <?php 
-    $file = fopen('./Assignment3/TextContent/HomeInfo.txt', 'r');
+    $file = fopen('./TextContent/HomeInfo.txt', 'r');
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -11,12 +11,12 @@
         <div class="header">
             <div class="nav-links">
                 <ul>
-                    <li><a href="index.html"><u>Home</u></a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contacts</a></li>
-                    <li><a href="social.html">Social</a></li>
-                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="index.php"><u>Home</u></a></li>
+                    <li><a href="resume.php">Resume</a></li>
+                    <li><a href="projects.php">Projects</a></li>
+                    <li><a href="contact.php">Contacts</a></li>
+                    <li><a href="social.php">Social</a></li>
+                    <li><a href="admin.php">Admin</a></li>
                 </ul>
             </div>
         </div>

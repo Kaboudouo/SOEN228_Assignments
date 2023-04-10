@@ -8,12 +8,12 @@
         <div class="header">
             <div class="nav-links">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html"><u>Contacts</u></a></li>
-                    <li><a href="social.html">Social</a></li>
-                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="resume.php">Resume</a></li>
+                    <li><a href="projects.php">Projects</a></li>
+                    <li><a href="contact.php"><u>Contacts</u></a></li>
+                    <li><a href="social.php">Social</a></li>
+                    <li><a href="admin.php">Admin</a></li>
                 </ul>
             </div>
         </div>
