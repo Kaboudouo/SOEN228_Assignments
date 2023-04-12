@@ -1,5 +1,5 @@
 <?php 
-    $file = fopen('./TextContent/SocialsInfo.txt', 'r');
+    $lines = file('./TextContent/SocialsInfo.txt', FILE_IGNORE_NEW_LINES);
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -22,12 +22,17 @@
         </div>
 
         <div class = "social">
-            <img src="rsc/media_ico.png" alt="MediaIcos" usemap="#workmap" width="500" />
-            <map id="workmap">
-                <area shape="rect" coords="200, 15, 300, 115" href="https://www.twitter.com" target="_blank" alt ="twitter" />
-                <area shape="rect" coords="200, 200, 300, 300" href="https://github.com/Kaboudouo?tab=repositories" target="_blank" alt ="github" />
-                <area shape="rect" coords="375, 200, 575, 300" href="https://www.linkedin.com/in/noa-chayer-90905a252/" target="_blank" alt ="linkedin" />
-            </map>
+            <img src="rsc/socials.png" alt="MediaIcos" usemap="#workmap" width="500" />
+            <?php 
+                $social1 = $lines[0];
+                $social2 = $lines[1];
+                $social3 = $lines[2];
+                echo "<map id='workmap'>
+                        <area shape='rect' coords='0, 0, 150, 200' href='$social1' target='_blank' alt ='social1' />
+                        <area shape='rect' coords='175, 0, 325, 200' href='$social2' target='_blank' alt ='social2' />
+                        <area shape='rect' coords='350, 0, 700, 200' href='$social3' target='_blank' alt ='social3' />
+                    </map>";
+            ?>
         </div>
     </body>
 </html>
