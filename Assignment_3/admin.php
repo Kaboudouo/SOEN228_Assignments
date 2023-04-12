@@ -3,7 +3,26 @@
     <head>
         <title>Chayer Profile</title>
         <link rel="stylesheet" href="index.css" />
+        <script>
+            function processLogin(){
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("pw").value;
+                var timestamp = new Date(Date.now());
+                var agent = navigator.userAgent;
 
+                if (username === "username" && password === "password"){
+                    sessionStorage.setItem("username", username);
+                    sessionStorage.setItem("password", btoa(password));
+                    sessionStorage.setItem("timestamp", timestamp);
+                    sessionStorage.setItem("user-agent", agent);
+
+                    window.location.href="../Assignment_2/adminIndex.html";
+                } else {
+                    alert("Credentials are:\nUsername: username\nPassword: password");
+                }
+
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -35,7 +54,7 @@
                 </div>
     
                 <div class="logbutton">
-                    <input id = "login" type="button" value = "Login"/>
+                    <input id = "login" type="button" onclick="processLogin()" value = "Login"/>
                 </div>
             </div>
         </div>
