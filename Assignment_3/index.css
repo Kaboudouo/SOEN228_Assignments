@@ -265,15 +265,16 @@ dd {
 .input-fields input {
   color: white;
   font-size: 20px;
-  height: 30px;
-  padding: 5px;
+  height: 50px;
+  width: 300px;
+  padding: 2px;
   background-color: transparent;
   border: 2px solid white;
   margin-top: 5px;
   border-radius: 3px;
 }
 .input-fields input:focus {
-  padding: 5px;
+  padding: 2px;
   background-color: rgba(49, 49, 54, 0.562);
   border: 2px solid white;
 }

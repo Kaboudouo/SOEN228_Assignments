@@ -3,6 +3,27 @@
     <head>
         <title>Chayer Profile</title>
         <link rel="stylesheet" href="index.css" />
+        <script type="text/javascript">
+            function submitContactMsg(){
+                var name = document.getElementById("name-field").value;
+                var email = document.getElementById("email-field").value;
+                var number = document.getElementById("tel-field").value;
+                var msg = document.getElementById("msg-box").value;
+
+                var txtFile = new File([name + "\n" + email + "\n" + number + "\n" + msg],
+                './TextContent',        
+                {
+                type: 'text/plain',
+                }
+                );
+                var blob2URL = window.URL.createObjectURL(txtFile);
+
+                var anchorTag = document.createElement('a');
+                anchorTag.href = blob2URL;
+                anchorTag.download = 'ContactInfo';
+                anchorTag.click();
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -48,7 +69,14 @@
                     </div>
                     <textarea id="msg-box"  rows="5" cols="100"></textarea>
                 </div>
-
+                <div>
+                    <input
+                        id="submit"
+                        type="button"
+                        value="Submit"
+                        onclick="submitContactMsg()"
+                    />
+                </div>
             </div>
         </div>
     </body>
