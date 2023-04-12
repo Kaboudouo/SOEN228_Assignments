@@ -223,10 +223,10 @@ dd {
 
 /* Projects */
 .projects {
-  margin-left: 19%;
   margin-top: -3%;
-  width: 60%;
-  justify-content: left;
+  margin-left: 25%;
+  width: 50%;
+  justify-content: center;
   padding: 100px;
 }
 .projects ol {
@@ -240,20 +240,9 @@ dd {
 .projects ol p {
   color: rgb(211, 211, 211);
   font-size: 20px;
-  width: 50%;
-  border-right: 2px solid white;
+  width: 75%;
   padding-right: 7%;
   padding-top: 2%;
-}
-.box {
-  display: flex;
-  align-items: center;
-}
-.box img {
-  width: 250px;
-  margin-left: 8%;
-  border: 4px solid white;
-  border-radius: 8px;
 }
 
 /*Contact*/

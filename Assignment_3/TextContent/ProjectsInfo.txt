@@ -1,0 +1,8 @@
+GameComplex E-Commerce Website
+Dynamic E-Commerce website created using Javascript and React. This projects seeks to include the prevalent knowledge needed for front-end development. This website can be accessed here: mern-gamecomplex.herokuapp.com
+Thrill of the Kill - Multiplayer FPS (WIP)
+Action-packed first person shooter. Created using Unity, Thrill of the Kill is a movement-heavy and ability-based game, seeking to get your adrenaline going. The purpose of this project is to develop different game-making techniques while also learning networking.
+Foreign Exchange Trading Algorithm
+Coded in the MQL5 language, by catching long term trends in the Foreign Exchange through price oscillation analysis, my latest trading algorithm was able to return 110% profits in the last year. This algorithm is still being optimized.
+Poker Game
+This python based game of poker features a complete GUI and adaptive AI for the computer players. The CPUs will handle their decisions given the strength of their cards, with leeway to bluff the player out. Included in the repository is a study documentation, outlining the game logic and playtesting results.
