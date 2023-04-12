@@ -1,5 +1,6 @@
 <?php 
-    $file = fopen('./TextContent/ProjectsInfo.txt', 'r');
+    // $file = fopen('./TextContent/ProjectsInfo.txt', 'r');
+    $lines = file('./TextContent/ProjectsInfo.txt', FILE_IGNORE_NEW_LINES);
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">

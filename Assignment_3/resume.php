@@ -1,5 +1,6 @@
 <?php 
-    $file = fopen('./TextContent/ResumeInfo.txt', 'r');
+    // $file = fopen('./TextContent/ResumeInfo.txt', 'r');
+    $lines = file('./TextContent/ResumeInfo.txt', FILE_IGNORE_NEW_LINES);
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -8,6 +9,28 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
+        <script type="text/javascript">
+            function createNewEduc(school, degree, year){
+
+                const dtnode = document.createElement("dt");
+                const dttext = document.createTextNode(school);
+                dtnode.appendChild(dttext);
+
+                const ddnode1 = document.createElement("dd");
+                const ddnode2 = document.createElement("dd");
+                const ddtext1 = document.createTextNode(degree);
+                const ddtext2 = document.createTextNode(year);
+                ddnode2.classList.add("dates")
+
+                ddnode1.appendChild(ddtext1);
+                ddnode2.appendChild(ddtext2);
+
+                const dlnode = document.getElementById("education");
+                dlnode.appendChild(dtnode);
+                dlnode.appendChild(ddnode1);
+                dlnode.appendChild(ddnode2);
+            }
+        </script>
         <div class="header">
             <div class="nav-links">
                 <ul>
@@ -24,20 +47,24 @@
         <div class = "container1">
             <div class="education"> 
                 <h1 class="titles"> EDUCATION </h1>
-                <dl>
-                    <dt>College Notre-Dame</dt>
-                    <dd>High School Diploma</dd>
-                    <dd class="dates">2014 - 2019</dd>
-                
-                    <dt>Dawson College</dt>
-                    <dd>Diplome d'Etudes Collegial (DEC) | Pure And Applied Sciences </dd>
-                    <dd class="dates">2019 - 2021</dd>
-                
-                    <dt>Concordia University</dt>
-                    <dd>Bachelor's Degree (In progress) | Computer Science</dd>
-                    <dd>Minor (In progress) | Economics</dd>
-                    <dd class="dates">2021 - now</dd>
-                </dl>
+                <dl id="education"></dl>
+                <?php 
+                    $i = -1;
+                    while($i < sizeof($lines)){
+                        $i++;
+                        if ($lines[$i] == ""){
+                            break;
+                        } else{
+                            $school = $lines[$i];
+                            $degree = $lines[$i + 1];
+                            $year = $lines[$i + 2];
+                            echo "<script type='text/javascript'>
+                                createNewEduc(`$school`, `$degree`, `$year`);
+                                </script>";
+                            $i += 2;
+                        }
+                    }
+                ?>
             </div>
             <div class = "technicals">
                 <h1 class="titles">TECHNICAL SKILLS</h1>
