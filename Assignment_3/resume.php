@@ -7,8 +7,6 @@
     <head>
         <title>Chayer Profile</title>
         <link rel="stylesheet" href="index.css" />
-    </head>
-    <body>
         <script type="text/javascript">
             function createNewEduc(school, degree, year){
 
@@ -30,7 +28,59 @@
                 dlnode.appendChild(ddnode1);
                 dlnode.appendChild(ddnode2);
             }
+
+            function addToTechnicals(category, line){
+                // Category 0 = Software, 1 = Coding
+                const linode = document.createElement("li");
+                const litext = document.createTextNode(line);
+                linode.appendChild(litext);
+                let element = null;
+                if (category == 0){
+                    element = document.getElementById("sftw-prof")
+                } else{
+                    element = document.getElementById("code-lang")
+                }
+                element.appendChild(linode);
+            }
+
+            function createWorkExperience(title, date, description){
+                const titletxt = document.createTextNode(title);
+                const datetxt = document.createTextNode(date);
+                const descriptiontxt =document.createTextNode(description);
+
+                const linode = document.createElement("li");
+                const h2node = document.createElement("h2");
+                const pnode = document.createElement("p");
+
+                h2node.appendChild(datetxt);
+                pnode.appendChild(descriptiontxt);
+
+                linode.appendChild(titletxt);
+                linode.appendChild(h2node);
+                linode.appendChild(pnode);
+
+                const element = document.getElementById("wrk-exp")
+                element.appendChild(linode);
+            }
+
+            
+            function addToARR(category, line){
+                // Category 0 = Awards & Recognition, 1 = References
+                const linode = document.createElement("li");
+                const litext = document.createTextNode(line);
+                linode.appendChild(litext);
+                let element = null;
+                if (category == 0){
+                    element = document.getElementById("anr")
+                } else{
+                    element = document.getElementById("ref")
+                }
+                element.appendChild(linode);
+            }
+
         </script>
+    </head>
+    <body>
         <div class="header">
             <div class="nav-links">
                 <ul>
@@ -69,69 +119,78 @@
             <div class = "technicals">
                 <h1 class="titles">TECHNICAL SKILLS</h1>
                 <dl>
-                    <dt>Coding Languages</dt>
-                    <dd>
-                        <ul>
-                            <li>C#</li>
-                            <li>CSS</li>
-                            <li>Java</li>
-                            <li>HTML</li>
-                            <li>Python</li>
-                            <li>Javascript</li>
-                        </ul>
-                    </dd>
                     <dt>Software Proficiencies</dt>
                     <dd>
-                        <ul>
-                            <li>Unity</li>
-                            <li>Github</li>
-                            <li>Photoshop</li>
-                            <li>Microsoft Office</li>
-                        </ul>
+                        <ul id="sftw-prof"></ul>
+                    </dd>
+                    <dt>Coding Languages</dt>
+                    <dd>
+                        <ul id="code-lang"></ul>
                     </dd>
                 </dl>
+                <?php 
+                    $j = 0;
+                    $i++;
+                    while($j < 2){
+                        if ($lines[$i] == ""){
+                            $j++;
+                        } else{
+                            $line = $lines[$i];
+                            echo "<script type='text/javascript'>
+                                addToTechnicals($j, `$line`);
+                                </script>";
+                        }
+                        $i++;
+                    }
+                ?>
             </div>
             <div class = "experience">
                 <h1 class="titles">WORK EXPERIENCE</h1>
-                <ol>
-                    <li>
-                        Supervisor, Cineplex Scotiabank 
-                        <h2>March 2022 - July 2022</h2>
-                        <p>
-                        Organising workspace, delegating tasks, and ensuring policy compliance
-                            to maintain an efficient work environment. Additionally includes training
-                            new personnel, taking inventory, and dealing with unexpected situations.
-                        </p>
-                    </li>
-
-                    <li>
-                        Cast Member
-                        <h2>July 2021 - March 2022</h2>
-                        <p>
-                            Operating a cash register for concession and box office. Requires constant
-                            customer interaction and working in synergy with co-workers, usually
-                            in a high-pressure environment.
-                        </p>
-                    </li>
-                </ol>
+                <ol id = "wrk-exp"></ol>
+                <?php 
+                    while($i < sizeof($lines)){
+                        if ($lines[$i] == ""){
+                            break;
+                        } else{
+                            $title = $lines[$i];
+                            $date = $lines[$i + 1];
+                            $description = $lines[$i + 2];
+                            echo "<script type='text/javascript'>
+                                createWorkExperience(`$title`, `$date`, `$description`);
+                                </script>";
+                            $i += 2;
+                        }
+                        $i++;
+                    }
+                ?>
             </div>
             <div class = "container2">
                 <div class = "awards">
                     <h1 class="titles">AWARDS AND RECOGNITION</h1>
-                    <ol>
-                        <li>Literally</li>
-                        <li>Nothing</li>
-                        <li>To see</li>
-                    </ol>
+                    <ol id="anr"></ol>
                 </div>
                 <div class = "references">
                     <h1 class="titles">REFERENCES</h1>
-                    <ul>
-                        <li>Again</li>
-                        <li>Nothing</li>
-                        <li>To see</li>
-                    </ul>
+                    <ul id="ref"></ul>
                 </div>
+                <?php 
+                    $j = 0;
+                    $i++;
+                    while($j < 2){
+                        if ($i >= sizeof($lines)){
+                            break;
+                        }
+                        if ($lines[$i] == ""){
+                            $j++;
+                        } else{
+                            $line = $lines[$i];
+                            echo "<script type='text/javascript'>
+                                addToARR($j, `$line`);
+                                </script>";
+                        }
+                        $i++;
+                    }
+                ?>
             </div>
             <button type ="button">Download Full CV</button>
         </div>
